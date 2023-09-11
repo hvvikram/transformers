@@ -43,6 +43,11 @@ class CamembertTokenizer(metaclass=DummyObject):
     def __init__(self, *args, **kwargs):
         requires_backends(self, ["sentencepiece"])
 
+class CodeLlamaTokenizer(metaclass=DummyObject):
+    _backends = ["sentencepiece"]
+
+    def __init__(self, *args, **kwargs):
+        requires_backends(self, ["sentencepiece"])
 
 class CpmTokenizer(metaclass=DummyObject):
     _backends = ["sentencepiece"]
